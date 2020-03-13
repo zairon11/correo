@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario De Contacto</title>
+
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="css/font-awesome.css">
+
+    <script src="js/jquery-3.2.1.js"></script>
+    <script src="js/script.js"></script>
+
+</head>
+<body>
+    <!--
+    <div class="modal_wrap">
+        <div class="mensaje_modal">
+            <h3>errores encontrados</h3>
+            <p>escriba un nombre</p>
+            <p>ingrese un correo electronico</p>
+            <p>escriba un mensaje</p>
+            <span id="btnClose">Cerrar</span>
+        </div>
+    </div>
+-->
+
+    <section class="form_wrap">
+        <section class="contact_info">            
+            <section class="info_title">
+                <span class="fa fa-user-circle"></span>
+                <h2>INFORMACION <br> DE CONTACTO</h2>
+            </section>
+
+            <section class="info_items">
+                <p><span class="fa fa-envelope"></span>jhoell.aries@gmail.com</p>
+                <p><span class="fa fa-mobile"></span>+1(585) 902-8665</p>
+            </section>
+        </section>
+         <!--utilizamos php en action-->
+        <form action="enviar.php" method="post"class="form_contact">
+            <h2>Envia un mensaje</h2>
+            <div class="user_info">
+                <label for="names">nombres *</label>
+                <!--cuand necesites que el dato se envie pero cuando los datos esteen llenos-->
+                <input type="text"id="names" name="nombre" required>
+
+                <label for="phone">telefono / celular</label>
+                <input type="text" id="phone" name="telefono">
+
+                <label for="email">correo electronico *</label>
+                <input type="text" id="email" name="correo" required>
+
+                <label for="mensaje">mensaje *</label>
+                <textarea id="mensaje" name="mensaje" required></textarea>
+
+                <input type="submit" value="enviar mensaje" id="btnSend">
+            </div>
+        </form>
+    </section>
+    
+</body>
+</html>
